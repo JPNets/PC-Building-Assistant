@@ -62,6 +62,8 @@ def render_3d_build(build: dict, highlight: str = None):
         m = box_mesh(x,y,z,dx,dy,dz,color=color,name=key)
         m.opacity = opacity
         fig.add_trace(m)
+        # add an invisible marker at the center for click interaction
+        fig.add_trace(go.Scatter3d(x=[x], y=[y], z=[z], mode='markers', marker=dict(size=6, color=color), name=key, customdata=[key], hovertext=[key], hoverinfo='text'))
 
     fig.update_layout(
         scene=dict(
@@ -71,4 +73,4 @@ def render_3d_build(build: dict, highlight: str = None):
         margin=dict(l=0,r=0,t=0,b=0), paper_bgcolor='rgba(0,0,0,0)',
         showlegend=False
     )
-    st.plotly_chart(fig, use_container_width=True)
+    return fig

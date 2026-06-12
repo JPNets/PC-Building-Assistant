@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_plotly_events import plotly_events
 from ui.sidebar import render_sidebar
 from ui.theme import apply_theme
 from ui.three_viewer import render_3d_build
@@ -13,9 +14,16 @@ import json
 st.set_page_config(page_title='AI PC Builder', layout='wide', initial_sidebar_state='expanded')
 
 st.header('AI-powered PC Builder Assistant')
-
 ui = render_sidebar()
 apply_theme()
+
+# Hero / top summary
+st.markdown('<div class="app-hero"><h1 class="app-title">AI PC Builder Assistant</h1><div class="app-sub">Smart, compatible PC builds tailored to your budget and needs — with explainable AI guidance.</div></div>', unsafe_allow_html=True)
+cols_top = st.columns([3,1])
+with cols_top[0]:
+    st.markdown('')
+with cols_top[1]:
+    st.markdown('<div class="glass-card"><strong>Quick Stats</strong><div class="muted">Use the sidebar to refine requirements</div></div>', unsafe_allow_html=True)
 
 page = st.selectbox('Page', ['Home','Build Generator','Compatibility Checker','Compare Builds','Saved Builds','Settings'])
 
@@ -44,8 +52,24 @@ if page == 'Build Generator':
                         st.markdown('**3D Visualization**')
                         comp_keys = list(b['components'].keys())
                         sel_key = f"highlight_{safe_type}_{idx}"
-                        highlight = st.selectbox(f"Highlight component ({group['type']} #{idx+1})", ['None'] + comp_keys, key=sel_key)
-                        render_3d_build(b, highlight=None if highlight == 'None' else highlight)
+                        highlight_select = st.selectbox(f"Highlight component ({group['type']} #{idx+1})", ['None'] + comp_keys, key=sel_key)
+                        # session-managed highlight (set by clicking component buttons)
+                        sess_high = st.session_state.get('highlight_component', None)
+                        chosen = sess_high if sess_high else (None if highlight_select == 'None' else highlight_select)
+                        fig = render_3d_build(b, highlight=chosen)
+                        # render interactive figure and capture clicks
+                        events = plotly_events(fig, click_event=True, key=f"3d_{safe_type}_{idx}")
+                        if events:
+                            # pick the customdata or name
+                            ev = events[0]
+                            comp_clicked = ev.get('customdata') or ev.get('hovertext') or ev.get('pointLabel')
+                            if isinstance(comp_clicked, list):
+                                comp_clicked = comp_clicked[0]
+                            if comp_clicked:
+                                st.session_state['highlight_component'] = comp_clicked
+                        # allow clearing highlight
+                        if st.button('Clear highlight', key=f"clear_{safe_type}_{idx}"):
+                            st.session_state['highlight_component'] = None
                     with col2:
                         st.plotly_chart(budget_pie(b), use_container_width=True, key=f"budget_{safe_type}_{idx}")
                         st.plotly_chart(performance_bar(b), use_container_width=True, key=f"perf_{safe_type}_{idx}")
