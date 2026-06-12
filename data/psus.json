@@ -1,0 +1,18 @@
+[
+  {
+    "id": "psu-seasonic-650",
+    "name": "Seasonic Focus GX-650, 650W 80+ Gold",
+    "brand": "Seasonic",
+    "wattage": 650,
+    "efficiency": "80+ Gold",
+    "price": 95
+  },
+  {
+    "id": "psu-corsair-rmx-850",
+    "name": "Corsair RMx 850W, 80+ Gold",
+    "brand": "Corsair",
+    "wattage": 850,
+    "efficiency": "80+ Gold",
+    "price": 140
+  }
+]

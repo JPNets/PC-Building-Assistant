@@ -1,0 +1,29 @@
+[
+  {
+    "id": "mobo-asus-b660",
+    "name": "ASUS Prime B660-PLUS",
+    "brand": "ASUS",
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "ram_generation": "DDR4",
+    "price": 150
+  },
+  {
+    "id": "mobo-msi-b550",
+    "name": "MSI B550-A PRO",
+    "brand": "MSI",
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "ram_generation": "DDR4",
+    "price": 140
+  },
+  {
+    "id": "mobo-asus-z690",
+    "name": "ASUS ROG STRIX Z690-F",
+    "brand": "ASUS",
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "ram_generation": "DDR5",
+    "price": 360
+  }
+]

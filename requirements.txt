@@ -1,0 +1,10 @@
+streamlit
+pandas
+plotly
+pydantic
+openai
+python-dotenv
+reportlab
+jinja2
+Pillow
+pdfkit

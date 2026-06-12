@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ram-corsair-16-ddr4",
+    "name": "Corsair Vengeance LPX 16GB (2x8) DDR4-3200",
+    "brand": "Corsair",
+    "ddr_generation": "DDR4",
+    "capacity_gb": 16,
+    "speed_mhz": 3200,
+    "price": 55
+  },
+  {
+    "id": "ram-gskill-32-ddr5",
+    "name": "G.Skill Trident Z5 32GB (2x16) DDR5-6000",
+    "brand": "G.Skill",
+    "ddr_generation": "DDR5",
+    "capacity_gb": 32,
+    "speed_mhz": 6000,
+    "price": 220
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cooler-bequiet-purerock",
+    "name": "be quiet! Pure Rock 2",
+    "brand": "be quiet!",
+    "supported_sockets": ["LGA1700", "AM4"],
+    "type": "Air",
+    "tdp_support": 150,
+    "price": 45
+  },
+  {
+    "id": "cooler-noctua-d15",
+    "name": "Noctua NH-D15",
+    "brand": "Noctua",
+    "supported_sockets": ["LGA1700", "AM4"],
+    "type": "Air",
+    "tdp_support": 220,
+    "price": 100
+  }
+]

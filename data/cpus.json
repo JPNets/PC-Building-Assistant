@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cpu-intel-i5-12400",
+    "name": "Intel Core i5-12400",
+    "brand": "Intel",
+    "socket": "LGA1700",
+    "cores": 6,
+    "threads": 12,
+    "tdp": 65,
+    "performance_score": 7200,
+    "power_draw": 65,
+    "price": 170
+  },
+  {
+    "id": "cpu-amd-5600x",
+    "name": "AMD Ryzen 5 5600X",
+    "brand": "AMD",
+    "socket": "AM4",
+    "cores": 6,
+    "threads": 12,
+    "tdp": 65,
+    "performance_score": 7000,
+    "power_draw": 65,
+    "price": 160
+  },
+  {
+    "id": "cpu-intel-i7-12700k",
+    "name": "Intel Core i7-12700K",
+    "brand": "Intel",
+    "socket": "LGA1700",
+    "cores": 12,
+    "threads": 20,
+    "tdp": 125,
+    "performance_score": 11500,
+    "power_draw": 125,
+    "price": 420
+  }
+]

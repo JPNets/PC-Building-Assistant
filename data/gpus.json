@@ -1,0 +1,32 @@
+[
+  {
+    "id": "gpu-nvidia-rtx3060",
+    "name": "NVIDIA GeForce RTX 3060",
+    "brand": "NVIDIA",
+    "vram_gb": 12,
+    "power_draw": 170,
+    "performance_score": 9000,
+    "length_mm": 242,
+    "price": 330
+  },
+  {
+    "id": "gpu-nvidia-rtx4070",
+    "name": "NVIDIA GeForce RTX 4070",
+    "brand": "NVIDIA",
+    "vram_gb": 12,
+    "power_draw": 200,
+    "performance_score": 15000,
+    "length_mm": 242,
+    "price": 599
+  },
+  {
+    "id": "gpu-amd-rx6700xt",
+    "name": "AMD Radeon RX 6700 XT",
+    "brand": "AMD",
+    "vram_gb": 12,
+    "power_draw": 230,
+    "performance_score": 9500,
+    "length_mm": 267,
+    "price": 479
+  }
+]

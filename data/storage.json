@@ -1,0 +1,20 @@
+[
+  {
+    "id": "storage-samsung-970evonvme-1tb",
+    "name": "Samsung 970 EVO Plus 1TB NVMe SSD",
+    "brand": "Samsung",
+    "type": "NVMe",
+    "interface": "PCIe 3.0",
+    "capacity_gb": 1000,
+    "price": 75
+  },
+  {
+    "id": "storage-crucial-m550-sata-1tb",
+    "name": "Crucial MX500 1TB SATA SSD",
+    "brand": "Crucial",
+    "type": "SATA",
+    "interface": "SATA",
+    "capacity_gb": 1000,
+    "price": 85
+  }
+]

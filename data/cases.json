@@ -1,0 +1,18 @@
+[
+  {
+    "id": "case-nzxt-h510",
+    "name": "NZXT H510 Mid Tower",
+    "brand": "NZXT",
+    "supported_form_factors": ["ATX", "Micro-ATX", "Mini-ITX"],
+    "gpu_clearance_mm": 381,
+    "price": 80
+  },
+  {
+    "id": "case-fractal-define7",
+    "name": "Fractal Design Define 7",
+    "brand": "Fractal",
+    "supported_form_factors": ["ATX", "E-ATX", "Micro-ATX", "Mini-ITX"],
+    "gpu_clearance_mm": 360,
+    "price": 169
+  }
+]
